@@ -327,7 +327,15 @@
   {{ media_slot_2 }}
 
   {% if media_count == 0 %}
-    {{ 'hero-apparel-1' | placeholder_svg_tag: 'hero__media' }}
+    <img
+      src="{{ 'hero-background.png' | asset_url }}"
+      class="hero__media"
+      alt="Breakdancer with butterflies"
+      loading="eager"
+      width="1920"
+      height="1080"
+      style="object-fit: cover; width: 100%; height: 100%;"
+    >
   {%- endif -%}
 {% endcapture %}
 
